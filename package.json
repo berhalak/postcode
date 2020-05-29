@@ -1,8 +1,8 @@
 {
-	"name": "template",
+	"name": "@postcode/vm",
 	"private": false,
 	"version": "0.0.1",
-	"description": "Typescript template",
+	"description": "PostCode language",
 	"main": "dist/index.js",
 	"types": "dist/index.d.ts",
 	"scripts": {
@@ -10,25 +10,33 @@
 		"build": "tsc",
 		"compile": "tsc --noEmit",
 		"watch": "jest --watch",
-		"main": "ts-node ./src/main.ts"
+		"main": "ts-node ./src/main.ts",
+		"grammar": "tspegjs ./src/grammar.pegjs"
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/berhalak/template.git"
+		"url": "git+https://github.com/berhalak/postcode.git"
 	},
 	"author": "berhalak",
-	"keywords": [],
+	"keywords": [
+		"postcode vm language"
+	],
 	"license": "MIT",
 	"bugs": {
-		"url": "https://github.com/berhalak/template/issues"
+		"url": "https://github.com/berhalak/postcode/issues"
 	},
-	"homepage": "https://github.com/berhalak/template#readme",
+	"homepage": "https://github.com/berhalak/postcode#readme",
 	"devDependencies": {
-		"@types/jest": "^25.2.2",
-		"@types/node": "^14.0.1",
-		"jest": "^25.4.0",
-		"ts-jest": "^25.5.1",
-		"ts-node": "^8.10.1",
-		"typescript": "^3.9.2"
+		"@types/jest": "^25.2.3",
+		"@types/luxon": "^1.24.0",
+		"@types/node": "^14.0.5",
+		"jest": "^26.0.1",
+		"ts-jest": "^26.0.0",
+		"ts-node": "^8.10.2",
+		"ts-pegjs": "^0.2.6",
+		"typescript": "^3.9.3"
+	},
+	"dependencies": {
+		"luxon": "^1.24.1"
 	}
 }
